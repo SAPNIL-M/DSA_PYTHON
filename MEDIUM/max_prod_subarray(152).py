@@ -10,4 +10,4 @@ def max_prod_subarray(nums):
         if suf==0 : suf=1
     return ans
 
-print(max_prod_subarray([2,3,-2,4]))
+print(max_prod_subarray([-1, -2, -3, -4]))
