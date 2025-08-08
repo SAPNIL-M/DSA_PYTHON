@@ -1,14 +1,10 @@
 def move_zeros(nums):    
-    count =0
     n=len(nums)
-    for i in range(n-1,-1,-1):
-        if nums[i]==0:
-            count=count+1
-            nums.pop(i)
-            
-    for i in range(count):
-        nums.append(0)
+    left=0
+    for right in range(n):
+        if nums[right]!=0:
+            nums[right],nums[left]=nums[left],nums[right]
+            left+=1
+    return nums
 
-    print(nums)
-
-move_zeros([0,1,0,3,12])
+print(move_zeros([0,1,0,3,12]))
